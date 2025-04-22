@@ -10,8 +10,10 @@
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/scss/mixin";
+
 .header{
-    @include flex-center;
+    @include mixin.flex-center;
 
     margin-top: 100px;
 

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const navItems = ref([
+import type { Nav } from '../types/nav.ts';
+const navItems = ref<Nav[]>([
     {
         idx: 0,
         label: "일반시사",
@@ -17,7 +18,7 @@ const navItems = ref([
     },
     {
         idx: 3,
-        label: "건강강",
+        label: "건강",
         value: "Health",
     },
     {
@@ -39,23 +40,26 @@ const navItems = ref([
 </script>
 
 <template>
-    <div class="nav">
+    <nav class="nav">
         <ul class="nav_list">
             <li v-for="item in navItems" :key="item.idx" class="nav_list_item">{{item.label}}</li>
         </ul>
-    </div>
+    </nav>
 </template>
 
 <style lang="scss" scoped>
+@use "../assets/scss/color.scss";
+@use "../assets/scss/mixin";
+
 .nav{
-    @include flex-center;
+    @include mixin.flex-center;
 
     width: 100%;
 
     margin-top: 88px;
 
     &_list{
-        @include flex-center;
+        @include mixin.flex-center;
         list-style: none;
 
         width: 100%;
@@ -63,13 +67,13 @@ const navItems = ref([
         gap: 24px;
 
         &_item{
-            @include flex-center;
+            @include mixin.flex-center;
 
             padding: 6px 12px;
 
-            background-color: $color-gray-200;
+            background-color: color.$color-gray-200;
             border-radius: 8px;
-            color: $color-black-700;
+            color: color.$color-black-700;
 
             cursor: pointer;
         }
