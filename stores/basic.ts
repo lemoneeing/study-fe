@@ -1,30 +1,30 @@
-import {defineStore} from "pinia";
+// import {defineStore} from "pinia";
 
-export const useStore = defineStore('storeId', () => {
-    // Setup Stores
-    // State
-    const count = ref<number>(10);
-    const name = ref<string>("lemoneeing");
+// export const useStore = defineStore('storeId', () => {
+//     // Setup Stores
+//     // State
+//     const count = ref<number>(10);
+//     const name = ref<string>("lemoneeing");
 
-    // Getters
-    const doubleCount = computed(()=>{
-        return count.value * 2;
-    })
+//     // Getters
+//     const doubleCount = computed(()=>{
+//         return count.value * 2;
+//     })
 
-    const doublePlusOne = computed(()=>{
-        return count.value * 3;
-    })
+//     const doublePlusOne = computed(()=>{
+//         return count.value * 3;
+//     })
 
-    // Actions
-    function increment(){
-        count.value++;
-    }
+//     // Actions
+//     function increment(){
+//         count.value++;
+//     }
 
-    function randomizeCounter(){
-        count.value = Math.round(100 * Math.random());
-    }
+//     function randomizeCounter(){
+//         count.value = Math.round(100 * Math.random());
+//     }
 
-    return {count, name, doubleCount, doublePlusOne, increment, randomizeCounter};
+//     return {count, name, doubleCount, doublePlusOne, increment, randomizeCounter};
 
     // Option Stores
     // state:() => ({
@@ -42,4 +42,4 @@ export const useStore = defineStore('storeId', () => {
     //         this.count++;
     //     },
     // }
-});
+// });

@@ -4,7 +4,7 @@ import dayjs from "dayjs";
 
 interface Props {
     data: Article;
-}
+};
 
 const props = defineProps<Props>();
 const { data } = toRefs(props);
@@ -12,15 +12,19 @@ const { data } = toRefs(props);
 const url = data.value.url;
 const website = computed(()=>{
     return url.split("https://").pop()?.split("/")[0];
-})
+});
 
 const logo = computed(() => {
     return `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${website.value}&size=16`;
-})
+});
+
+const openSite = () => {
+    window.open(data.value.url, "_blank");
+};
 </script>
 
 <template>
-    <div class="card">
+    <div class="card" @click="openSite">
         <div class="card_image-box">
             <img v-if="data.urlToImage" :src="data.urlToImage" alt="" class="card_image-box_image" />
             <div v-else class="card_image-box_noData">등록된 이미지가 없습니다.</div>
