@@ -1,27 +1,8 @@
 {
-  "name": "nuxt-app",
+  "name": "study-fe",
+  "packageManager": "yarn@4.9.1",
   "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxi build",
-    "dev": "nuxi dev",
-    "generate": "nuxi generate",
-    "preview": "nuxi preview",
-    "postinstall": "nuxi prepare"
-  },
-  "dependencies": {
-    "@nuxtjs/axios": "^5.13.6",
-    "@pinia/nuxt": "^0.11.0",
-    "day": "^0.0.2",
-    "dayjs": "^1.11.13",
-    "nuxt": "^3.16.2",
-    "pinia": "^3.0.2",
-    "sass": "^1.86.3",
-    "typescript": "^5.8.3",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0",
-    "vue-tsc": "^2.2.8",
-    "vue3-spinners": "^1.3.1"
-  },
-  "packageManager": "yarn@4.9.1+sha512.f95ce356460e05be48d66401c1ae64ef84d163dd689964962c6888a9810865e39097a5e9de748876c2e0bf89b232d583c33982773e9903ae7a76257270986538"
+  "workspaces":[
+  	"packages/*"
+  ]
 }
