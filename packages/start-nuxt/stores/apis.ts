@@ -6,6 +6,7 @@ export const useStore = defineStore("store", () => {
     //State
     const searchValue = ref<string>("korea");
     const articleList = ref<Article[]>([]);
+    const API_KEY = ref<string>("");
 
     //Actions
     //Mutations => State 변경 목적
@@ -15,9 +16,14 @@ export const useStore = defineStore("store", () => {
 
     //New API 호출
     const getNews = async () => {
-        const API_KEY="190727eebc064fad996cb098a492dfcf";
-        
-
+        const config = useRuntimeConfig();
+        API_KEY.value = config.newsApiKey;
+        // API 키가 설정되었는지 확인 (중요)
+        if (!API_KEY) {
+            console.error('Error: NEWS_API_KEY is not configured properly in runtimeConfig.');
+            // 적절한 에러 처리 또는 기본값 반환
+            return [];
+        }
         const API_URL=`https://newsapi.org/v2/everything?q=${searchValue.value}&from=2025-04-21&sortBy=popularity&apiKey=${API_KEY}`;
         
         try{
