@@ -1,12 +1,10 @@
 import {defineStore} from "pinia";
-import axios from "axios";
 import type { Article } from "~/types/api";
 
 export const useStore = defineStore("store", () => {
     //State
     const searchValue = ref<string>("korea");
     const articleList = ref<Article[]>([]);
-    const API_KEY = ref<string>("");
 
     //Actions
     //Mutations => State 변경 목적
@@ -16,21 +14,16 @@ export const useStore = defineStore("store", () => {
 
     //New API 호출
     const getNews = async () => {
-        const config = useRuntimeConfig();
-        API_KEY.value = config.newsApiKey;
-        // API 키가 설정되었는지 확인 (중요)
-        if (!API_KEY) {
-            console.error('Error: NEWS_API_KEY is not configured properly in runtimeConfig.');
-            // 적절한 에러 처리 또는 기본값 반환
-            return [];
-        }
-        const API_URL=`https://newsapi.org/v2/everything?q=${searchValue.value}&from=2025-04-21&sortBy=popularity&apiKey=${API_KEY}`;
-        
+        const params = { q: searchValue.value }; // 검색어를 쿼리 파라미터로 전달
         try{
-            articleList.value = await axios.get(API_URL).then((res)=>{
-                return res.data.articles;
-            });
-            return articleList;
+            // 내부 Nuxt API 엔드포인트 호출 (/api/news)
+            // $fetch 사용 (Nuxt 3 권장). params 옵션으로 쿼리 전달
+            const articles = await $fetch<Article[]>('/api/news', { params });
+
+            // 필요하다면 스토어 상태 업데이트
+            articleList.value = articles;
+            return articles; // 가져온 데이터 반환 (useAsyncData 등에서 사용)
+
         } catch (error) {
             console.log(error);
             return [];
