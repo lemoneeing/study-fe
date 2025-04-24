@@ -1,15 +1,15 @@
 <template>
-    <div class="about">
-        <h1>About</h1>
-    </div>
+    <h1>Hello, {{ title }}!</h1>
 </template>
 
 <script>
 export default {
-    setup () {
+    data () {
         
 
-        return {}
+        return {
+            title: 'World'
+        };
     }
 }
 </script>
