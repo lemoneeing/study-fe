@@ -1,5 +1,4 @@
 <script setup>
-import TheWelcome from './components/TheWelcome.vue'
 </script>
 
 <template>
@@ -15,7 +14,7 @@ import TheWelcome from './components/TheWelcome.vue'
     <RouterLink to="/databindinghtml">5.3.2 Data Binding Html</RouterLink>
     <br />
     <RouterLink to="/databindinginputtext">5.3.3.1 Data Binding Input Text</RouterLink> | 
-    <RouterLink to="/databindinginputnumer">5.3.3.2 Data Binding Input Number</RouterLink> |
+    <RouterLink to="/databindinginputnumber">5.3.3.2 Data Binding Input Number</RouterLink> |
     <br />
     <RouterLink to="/databindingtextarea">5.3.3.3 Data Binding Textarea</RouterLink> |
     <RouterLink to="/databindingselect">5.3.3.4 Data Binding Select</RouterLink> |
@@ -26,9 +25,16 @@ import TheWelcome from './components/TheWelcome.vue'
     <RouterLink to="/databindingattribute">5.3.4.1 Data Binding Attribute</RouterLink> |
     <RouterLink to="/databindingbutton">5.3.4.2 Data Binding Button</RouterLink>
     <br />
-    <RouterLink to="databindingclass">5.3.5 Data Binding Class</RouterLink>
+    <RouterLink to="/databindingclass">5.3.5 Data Binding Class</RouterLink> | 
+    <RouterLink to="/databindingstyle">5.3.6 Data Binding Inline Style</RouterLink>
     <br />
-    <RouterLink to="databindingstyle">5.3.6 Data Binding Inline Style</RouterLink>
+    <RouterLink to="/databindinglist">5.4 List Rendering(v-for)</RouterLink>
+    <br />
+    <RouterLink to="/databindingvif">5.5 Rendering Grammar(v-if, v-show)</RouterLink>
+    <br />
+    <RouterLink to="/databindingeventclick">5.6.1 Click Event</RouterLink>
+    <br />
+    <RouterLink to="/databindingeventchange">5.6.2 Change Event</RouterLink>
   </div>
   <br />
 

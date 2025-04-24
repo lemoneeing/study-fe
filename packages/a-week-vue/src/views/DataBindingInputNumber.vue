@@ -8,7 +8,7 @@ export default {
         
 
         return {
-            numberModel: 'South Korea'
+            numberModel: 3
         };
     }
 }

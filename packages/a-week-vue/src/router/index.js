@@ -13,6 +13,10 @@ import DataBindingAttribute from '@/views/DataBindingAttribute.vue'
 import DataBindingButton from '@/views/DataBindingButton.vue'
 import DataBindingClass from '@/views/DataBindingClass.vue'
 import DataBindingStyle from '@/views/DataBindingStyle.vue'
+import DataBindingList from '@/views/DataBindingList.vue'
+import DataBindingVIf from '@/views/DataBindingVIf.vue'
+import DataBindingEventClick from '@/views/DataBindingEventClick.vue'
+import DataBindingEventChange from '@/views/DataBindingEventChange.vue'
 
 const routes = [
     {
@@ -84,6 +88,26 @@ const routes = [
         path:'/databindingstyle',
         name: 'DataBindingStyle',
         component: DataBindingStyle
+    },
+    {
+        path:'/databindinglist',
+        name: 'DataBindingList',
+        component: DataBindingList
+    },
+    {
+        path:'/databindingvif',
+        name: 'DataBindingVIf',
+        component: DataBindingVIf
+    },
+    {
+        path:'/databindingeventclick',
+        name: 'DataBindingEventClick',
+        component: DataBindingEventClick
+    },
+    {
+        path:'/databindingeventchange',
+        name: 'DataBindingEventChange',
+        component: DataBindingEventChange
     }
 ]
 
