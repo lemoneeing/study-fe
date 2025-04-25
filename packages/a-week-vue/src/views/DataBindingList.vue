@@ -23,41 +23,18 @@
 
 <script>
 export default {
-    data () {
+    data() {
         return {
-            productList: [
-                {
-                    "name": "키보드",
-                    "price": 25000,
-                    "category": "PC 주변 기기",
-                    "delivery_price": 5000
-                },
-                {
-                    "name": "로보트",
-                    "price": 50000,
-                    "category": "장난감",
-                    "delivery_price": 5000
-                },
-                {
-                    "name": "도마",
-                    "price": 30000,
-                    "category": "주방용품",
-                    "delivery_price": 5000
-                },
-                {
-                    "name": "로션",
-                    "price": 13000,
-                    "category": "미용",
-                    "delivery_price": 3000
-                },
-                {
-                    "name": "운동화",
-                    "price": 70000,
-                    "category": "패션",
-                    "delivery_price": 3000
-                },
-            ]
+            productList: []
         };
+    },
+    created(){
+        this.getList();
+    },
+    methods: {
+        async getList() {
+            this.productList = await this.$api("https://6c566cd5-e74a-4b97-abe4-61cfff8d1489.mock.pstmn.io/list", "get");
+        }
     }
 }
 </script>
