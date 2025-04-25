@@ -21,7 +21,6 @@ export default {
 
 <style lang="scss" scoped>
 .type_result{
-    font-size: 20px;
     color: red;
 }
 </style>

@@ -18,6 +18,7 @@ import DataBindingVIf from '@/views/DataBindingVIf.vue'
 import DataBindingEventClick from '@/views/DataBindingEventClick.vue'
 import DataBindingEventChange from '@/views/DataBindingEventChange.vue'
 import NestedComponents from '@/views/NestedComponents.vue'
+import ParentComponent from '@/views/ParentComponent.vue'
 
 const routes = [
     {
@@ -114,6 +115,11 @@ const routes = [
         path:'/databindingnested',
         name: 'NestedComponents',
         component: NestedComponents
+    },
+    {
+        path:'/eventbyparent',
+        name: 'ParentComponent',
+        component: ParentComponent
     }
 ]
 
