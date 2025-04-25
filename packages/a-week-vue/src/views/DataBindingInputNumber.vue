@@ -5,8 +5,6 @@
 <script>
 export default {
     data () {
-        
-
         return {
             numberModel: 3
         };

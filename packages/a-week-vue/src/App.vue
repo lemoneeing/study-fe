@@ -35,6 +35,8 @@
     <RouterLink to="/databindingeventclick">5.6.1 Click Event</RouterLink>
     <br />
     <RouterLink to="/databindingeventchange">5.6.2 Change Event</RouterLink>
+    <br />
+    <RouterLink to="/databindingnested">8.1 Nested Components</RouterLink>
   </div>
   <br />
 
