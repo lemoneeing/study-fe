@@ -19,6 +19,7 @@ import DataBindingEventClick from '@/views/DataBindingEventClick.vue'
 import DataBindingEventChange from '@/views/DataBindingEventChange.vue'
 import NestedComponents from '@/views/NestedComponents.vue'
 import ParentComponent from '@/views/ParentComponent.vue'
+import ParentByChildEmit from '@/views/ParentByChildEmit.vue'
 
 const routes = [
     {
@@ -120,6 +121,11 @@ const routes = [
         path:'/eventbyparent',
         name: 'ParentComponent',
         component: ParentComponent
+    },
+    {
+        path:'/eventbychildemit',
+        name: 'ParentByChildEmit',
+        component: ParentByChildEmit
     }
 ]
 

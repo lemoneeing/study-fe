@@ -32,13 +32,13 @@
     <br />
     <RouterLink to="/databindingvif">5.5 Rendering Grammar(v-if, v-show)</RouterLink>
     <br />
-    <RouterLink to="/databindingeventclick">5.6.1 Click Event</RouterLink>
-    <br />
+    <RouterLink to="/databindingeventclick">5.6.1 Click Event</RouterLink> | 
     <RouterLink to="/databindingeventchange">5.6.2 Change Event</RouterLink>
     <br />
-    <RouterLink to="/databindingnested">8.1.1~2 Nested Components</RouterLink>
+    <RouterLink to="/databindingnested">8.1.1~2 Nested Components</RouterLink> | 
+    <RouterLink to="/eventbyparent">8.1.3~5 Child Event by Parent Components</RouterLink> |
     <br />
-    <RouterLink to="/eventbyparent">8.1.3 Child Event by Parent Components</RouterLink>
+    <RouterLink to="/eventbychildemit">8.1.6 Parent Emit by Child Components</RouterLink>
   </div>
   <br />
 
