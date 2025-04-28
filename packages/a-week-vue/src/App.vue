@@ -38,7 +38,7 @@
     <RouterLink to="/databindingnested">8.1.1~2 Nested Components</RouterLink> | 
     <RouterLink to="/eventbyparent">8.1.3~5 Child Event by Parent Components</RouterLink> |
     <br />
-    <RouterLink to="/eventbychildemit">8.1.6 Parent Emit by Child Components</RouterLink>
+    <RouterLink to="/eventbychildemit">8.1.6~7 Parent Emit by Child Components</RouterLink>
   </div>
   <br />
 

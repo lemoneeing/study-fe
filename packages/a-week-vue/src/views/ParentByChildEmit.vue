@@ -10,17 +10,17 @@ import ChildEmit from './ChildEmit.vue';
 export default {
     components: {ChildEmit},
     computed: {
-        msg(){
-            return this.$refs.child_cmp.msg;
+        parentMsg(){
+            return this.$refs.child_cmp.msg; // computed 를 이용한 자식 컴포넌트의 데이터와 동기화
         }
     },
     methods: {
-        sendMsg(data){
+        sendMsg(data){ // 자식 컴포넌트에서 $emit 으로 호출+data 까지 전달받음.
             console.log(data);
         },
 
         checkChildMsg(){
-            alert(this.msg);
+            alert(this.parentMsg);
         }
     }
 }
