@@ -20,6 +20,7 @@ import DataBindingEventChange from '@/views/DataBindingEventChange.vue'
 import NestedComponents from '@/views/NestedComponents.vue'
 import ParentComponent from '@/views/ParentComponent.vue'
 import ParentByChildEmit from '@/views/ParentByChildEmit.vue'
+import PageTitle from '@/views/PageTitle.vue'
 
 const routes = [
     {
@@ -126,6 +127,11 @@ const routes = [
         path:'/eventbychildemit',
         name: 'ParentByChildEmit',
         component: ParentByChildEmit
+    },
+    {
+        path:'/slotpagetitle',
+        name: 'PageTitle',
+        component: PageTitle
     }
 ]
 

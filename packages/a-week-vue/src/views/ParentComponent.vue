@@ -1,6 +1,6 @@
 <template>
     <div>
-        <ChildComponent ref="child_cmp"/> <!--ref: 부모 컴포넌트에서 자식 컴포넌트의 데이터에 직접 접근할 수 있게 해줌.-->
+        <ChildComponent ref="child_cmp"/> <!--ref: 부모 컴포넌트에서 자식 컴포넌트의 이벤트를 직접 발생시키거나 데이터에 접근할 수 있게 해줌.-->
         <button type="button" @click="changeChildData">Change Child's Data</button>
     </div>
 </template>
