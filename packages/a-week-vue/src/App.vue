@@ -41,6 +41,8 @@
     <RouterLink to="/eventbychildemit">8.1.6~7 Parent Emit by Child Components</RouterLink>
     <br />
     <RouterLink to="/slotpagetitle">8.2 Slot</RouterLink>
+    <br />
+    <RouterLink to="/composiitonapi">9.1 CompositionAPI</RouterLink>
   </div>
   <br />
 

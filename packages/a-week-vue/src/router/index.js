@@ -21,6 +21,7 @@ import NestedComponents from '@/views/NestedComponents.vue'
 import ParentComponent from '@/views/ParentComponent.vue'
 import ParentByChildEmit from '@/views/ParentByChildEmit.vue'
 import PageTitle from '@/views/PageTitle.vue'
+import CompositionAPI from '@/views/CompositionAPI.vue'
 
 const routes = [
     {
@@ -132,6 +133,11 @@ const routes = [
         path:'/slotpagetitle',
         name: 'PageTitle',
         component: PageTitle
+    },
+    {
+        path:'/composiitonapi',
+        name: 'CompositionAPI',
+        component: CompositionAPI
     }
 ]
 
